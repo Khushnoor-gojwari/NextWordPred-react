@@ -1,15 +1,8 @@
 {
-  "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "pakage.json",
-      "use": "@vercel/static-build"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/api/(.*)",
+      "destination": "http://localhost:8000/api/$1"
     }
   ]
 }
